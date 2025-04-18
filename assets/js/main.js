@@ -120,4 +120,27 @@
 					visibleClass: 'header-visible'
 				});
 
+		// Fix for sidebar staying open
+		$(document).on('click', function(e) {
+			// If sidebar is visible and click is outside the sidebar
+			if ($body.hasClass('header-visible') && !$(e.target).closest('#header').length && !$(e.target).closest('#headerToggle').length) {
+				$body.removeClass('header-visible');
+				e.preventDefault();
+				return false;
+			}
+		});
+
+		// Fix toggle button behavior
+		$('#headerToggle .toggle').on('click', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+
+			// Toggle the header-visible class
+			if ($body.hasClass('header-visible')) {
+				$body.removeClass('header-visible');
+			} else {
+				$body.addClass('header-visible');
+			}
+		});
+
 })(jQuery);

@@ -2431,6 +2431,321 @@ input, select, textarea {
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
 				-webkit-overflow-scrolling: touch;
+	}
+
+/* Custom styles for the data engineer portfolio */
+
+/* Modern data-focused theme */
+:root {
+  --primary-color: #3b82f6;      /* Blue */
+  --secondary-color: #10b981;    /* Green */
+  --accent-color: #8b5cf6;       /* Purple */
+  --dark-bg: #111827;            /* Dark background */
+  --darker-bg: #0f172a;          /* Darker background */
+  --light-bg: #1e293b;           /* Light background */
+  --light-text: #f3f4f6;         /* Light text */
+  --muted-text: #9ca3af;         /* Muted text */
+  --card-bg: #1e293b;            /* Card background */
+  --hover-color: #60a5fa;        /* Hover color */
+  --success-color: #34d399;      /* Success color */
+  --warning-color: #fbbf24;      /* Warning color */
+  --danger-color: #f87171;       /* Danger color */
+  --border-radius: 8px;          /* Border radius */
+  --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Shadow */
+}
+
+/* Override base styles */
+body {
+  background: var(--dark-bg);
+  color: var(--light-text);
+}
+
+#header {
+  background: #1a1f36 url('images/overlay.png');
+}
+
+#main > section.one {
+  background-color: #0c4a6e;
+  background-image: url("../../images/hero-bg.jpg");
+}
+
+#main > section.two {
+  background-color: #0f172a;
+}
+
+#main > section.three {
+  background-color: #1e293b;
+}
+
+#main > section.four {
+  background-color: #0f172a;
+}
+
+/* Button styling */
+.button {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin: 0 0.5em 1em 0.5em;
+}
+
+.button:hover {
+  background-color: var(--hover-color);
+}
+
+/* Project cards with image in top left */
+.item {
+  position: relative;
+  min-height: 70px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2em;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove project-icon styles as we're not using them anymore */
+
+/* Improved slider styles */
+.project-slider {
+  position: relative;
+  overflow: visible;
+  margin: 2em 0;
+  min-height: 400px;
+  padding: 0 50px;
+}
+
+.project {
+  transition: all 0.5s ease;
+  padding: 0 15px;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.project.inactive {
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5em;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.slider-nav:hover {
+  background: var(--hover-color);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slider-nav.prev {
+  left: 10px;
+}
+
+.slider-nav.next {
+  right: 10px;
+}
+
+/* Slider pagination */
+.slider-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-dot {
+    width: 10px;
+    height: 10px;
+}
+
+/* Upwork badge in contact section */
+.upwork-contact-badge {
+  margin-top: 1.5em;
+  display: flex;
+  align-items: center;
+}
+
+.upwork-contact-badge img {
+  height: 40px;
+  margin-right: 0.75em;
+}
+
+.upwork-contact-badge a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.upwork-contact-badge a:hover {
+  text-decoration: underline;
+}
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-dot.active {
+    background: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* Fix testimonial image size */
+.upwork-badge img {
+  height: 35px;
+  margin-right: 0.5em;
+}
+  margin-bottom: 0.5em;
+}
+
+.tech-stack {
+  margin: 0.5em 0;
+}
+
+.tech-stack i {
+  font-size: 1.5em;
+  margin-right: 0.5em;
+}
+
+/* Skills section */
+.skill-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.skill-category {
+  flex: 1 1 45%;
+  background: var(--card-bg);
+  padding: 1.5em;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
+.skill-category h3 {
+  color: var(--primary-color);
+  margin-bottom: 1em;
+}
+
+.skill-icons {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.skill-icons i {
+  font-size: 2.5em;
+}
+
+/* Testimonials */
+.testimonial-slider {
+  position: relative;
+  margin: 2em 0;
+}
+
+.testimonial {
+  background: var(--card-bg);
+  padding: 2em;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
+blockquote {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 1em;
+  font-style: italic;
+}
+
+cite {
+  display: block;
+  margin-top: 1em;
+  font-style: normal;
+  color: var(--primary-color);
+}
+
+.upwork-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0;
+}
+
+.upwork-badge img {
+  height: 40px;
+  margin-right: 0.5em;
+}
+
+/* Contact section */
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 1em;
+}
+
+/* Project Slider Styles */
+.project-slider {
+    position: relative;
+    overflow: hidden;
+    margin: 2em 0;
+    min-height: 400px;
+}
+
+.project {
+    transition: all 0.3s ease;
+    padding: 0 10px;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.slider-nav.prev {
+    left: 10px;
+}
+
+.slider-nav.next {
+    right: 10px;
+}
+
+@media screen and (max-width: 736px) {
+    .project {
+        width: 100% !important;
+    }
+}
 				display: block;
 				height: 100%;
 				left: 0;
@@ -2477,6 +2792,34 @@ input, select, textarea {
 				height: 2.25em;
 				left: 0;
 				position: fixed;
+/* Profile container layout - fixed version */
+.profile-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+#logo .image {
+  flex-shrink: 0;
+  position: relative;
+  margin: 0;
+  width: 48px;
+  height: 48px;
+}
+
+#logo h1 {
+  margin: 0 0 0.25em 0;
+}
+
+#logo p {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.2;
+}
 				top: 0;
 				width: 3.25em;
 				z-index: 10001;
