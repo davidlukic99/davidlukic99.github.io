@@ -1,0 +1,70 @@
+/* Emergency sidebar fix */
+
+/* Force sidebar to stay closed on mobile */
+@media screen and (max-width: 960px) {
+  /* Hide the sidebar completely */
+  #header {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    transform: translateX(-100%) !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    left: -9999px !important;
+    width: 0 !important;
+  }
+  
+  /* Hide the toggle button */
+  #headerToggle {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    left: -9999px !important;
+    width: 0 !important;
+  }
+  
+  /* Force main content to take full width */
+  #main {
+    margin-left: 0 !important;
+    width: 100% !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  /* Force footer to take full width */
+  #footer {
+    margin-left: 0 !important;
+    width: 100% !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  /* Override any transforms that might be applied */
+  body.header-visible #main,
+  body.header-visible #footer,
+  body.header-visible #headerToggle {
+    transform: none !important;
+    margin-left: 0 !important;
+  }
+  
+  /* Ensure body has normal scrolling */
+  body.header-visible {
+    overflow: auto !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* Override any panel styles */
+  .panel {
+    transform: none !important;
+    transition: none !important;
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+
+/* Desktop styles remain unchanged */
+@media screen and (min-width: 961px) {
+  /* Normal sidebar behavior for desktop */
+}

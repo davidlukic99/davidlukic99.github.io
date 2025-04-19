@@ -107,39 +107,45 @@
 			)
 				.appendTo($body);
 
-		// Header.
-			$('#header')
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'left',
-					target: $body,
-					visibleClass: 'header-visible'
-				});
+		// IMPORTANT: Make sure sidebar is ALWAYS closed by default
+		$body.removeClass('header-visible');
 
-		// Fix for sidebar staying open
-		$(document).on('click', function(e) {
-			// If sidebar is visible and click is outside the sidebar
-			if ($body.hasClass('header-visible') && !$(e.target).closest('#header').length && !$(e.target).closest('#headerToggle').length) {
-				$body.removeClass('header-visible');
-				e.preventDefault();
-				return false;
-			}
-		});
-
-		// Fix toggle button behavior
+		// Completely override the panel behavior for better control
 		$('#headerToggle .toggle').on('click', function(e) {
 			e.preventDefault();
 			e.stopPropagation();
 
-			// Toggle the header-visible class
+			// Only open the sidebar, never close it with this button
+			if (!$body.hasClass('header-visible')) {
+				$body.addClass('header-visible');
+			}
+		});
+
+		// Handle the close button click - this is the ONLY way to close the sidebar
+		$('#sidebar-close').on('click', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			$body.removeClass('header-visible');
+		});
+
+		// Close sidebar when clicking on nav links
+		$('#nav a').on('click', function(e) {
+			// Only for internal links
+			if ($(this).attr('href').charAt(0) === '#') {
+				$body.removeClass('header-visible');
+			}
+		});
+
+		// Prevent clicks inside the sidebar from closing it
+		$('#header').on('click', function(e) {
+			e.stopPropagation();
+		});
+
+		// Close sidebar when clicking anywhere else on the page
+		$(document).on('click', function(e) {
+			// If sidebar is visible and click is outside the sidebar and toggle
 			if ($body.hasClass('header-visible')) {
 				$body.removeClass('header-visible');
-			} else {
-				$body.addClass('header-visible');
 			}
 		});
 
