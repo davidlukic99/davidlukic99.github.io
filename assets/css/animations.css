@@ -269,3 +269,9 @@ html {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Hugging Face Icon */
+.icon.brands.fa-huggingface::before {
+  font-family: 'Font Awesome 5 Brands';
+  content: '\f4e6'; /* Using a similar icon as fallback */
+}
