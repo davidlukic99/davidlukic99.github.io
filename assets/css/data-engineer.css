@@ -8,7 +8,8 @@
   --indigo-200: #c7d2fe;
   --indigo-300: #a5b4fc;
   --indigo-400: #818cf8;
-  --indigo-500: #6366f1;  /* Main accent color */
+  --indigo-500: #6366f1;
+  /* Main accent color */
   --indigo-600: #4f46e5;
   --indigo-700: #4338ca;
   --indigo-800: #3730a3;
@@ -21,16 +22,24 @@
   --violet-500: #8b5cf6;
 
   /* Dark Mode Backgrounds */
-  --bg-primary: #0a0a0f;      /* Deep black-blue */
-  --bg-secondary: #111118;    /* Slightly lighter */
-  --bg-tertiary: #1a1a24;     /* Card background */
-  --bg-card: #1e1e28;         /* Elevated card */
-  --bg-elevated: #252532;     /* Hover state */
+  --bg-primary: #0a0a0f;
+  /* Deep black-blue */
+  --bg-secondary: #111118;
+  /* Slightly lighter */
+  --bg-tertiary: #1a1a24;
+  /* Card background */
+  --bg-card: #1e1e28;
+  /* Elevated card */
+  --bg-elevated: #252532;
+  /* Hover state */
 
   /* Text Colors */
-  --text-primary: #f8fafc;    /* Almost white */
-  --text-secondary: #94a3b8;  /* Muted slate */
-  --text-muted: #64748b;      /* Dim slate */
+  --text-primary: #f8fafc;
+  /* Almost white */
+  --text-secondary: #94a3b8;
+  /* Muted slate */
+  --text-muted: #64748b;
+  /* Dim slate */
   --text-accent: var(--indigo-400);
 
   /* Border & Effects */
@@ -175,11 +184,11 @@ body {
 }
 
 /* Section Styling */
-#main > section {
+#main>section {
   padding: var(--space-20) 0;
 }
 
-#main > section.one {
+#main>section.one {
   background-color: var(--bg-primary);
   background-image:
     radial-gradient(ellipse at 20% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
@@ -190,7 +199,7 @@ body {
   position: relative;
 }
 
-#main > section.one::before {
+#main>section.one::before {
   content: '';
   position: absolute;
   top: 0;
@@ -201,20 +210,20 @@ body {
   z-index: 0;
 }
 
-#main > section.one .container {
+#main>section.one .container {
   position: relative;
   z-index: 1;
 }
 
-#main > section.two {
+#main>section.two {
   background-color: var(--bg-secondary);
 }
 
-#main > section.three {
+#main>section.three {
   background-color: var(--bg-primary);
 }
 
-#main > section.four {
+#main>section.four {
   background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
 }
 
@@ -256,14 +265,12 @@ body {
 
 /* Gradient Text Animation */
 .gradient-text {
-  background: linear-gradient(
-    135deg,
-    var(--indigo-400) 0%,
-    var(--cyan-400) 25%,
-    var(--violet-400) 50%,
-    var(--indigo-400) 75%,
-    var(--cyan-400) 100%
-  );
+  background: linear-gradient(135deg,
+      var(--indigo-400) 0%,
+      var(--cyan-400) 25%,
+      var(--violet-400) 50%,
+      var(--indigo-400) 75%,
+      var(--cyan-400) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -272,9 +279,17 @@ body {
 }
 
 @keyframes gradientFlow {
-  0% { background-position: 0% center; }
-  50% { background-position: 100% center; }
-  100% { background-position: 0% center; }
+  0% {
+    background-position: 0% center;
+  }
+
+  50% {
+    background-position: 100% center;
+  }
+
+  100% {
+    background-position: 0% center;
+  }
 }
 
 /* Buttons */
@@ -474,7 +489,7 @@ section header p {
 /* PROJECTS */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
   gap: var(--space-8);
   margin-top: var(--space-10);
   align-items: stretch;
@@ -886,13 +901,15 @@ section header p {
 
 /* Mobile */
 @media screen and (max-width: 768px) {
+
   /* Fix for mobile sidebar positioning */
-  html, body {
+  html,
+  body {
     overflow-x: hidden !important;
     width: 100% !important;
   }
 
-  #main > section {
+  #main>section {
     padding: var(--space-12) 0;
   }
 
@@ -974,6 +991,7 @@ section header p {
 
 /* Mobile sidebar visual theme overrides (positioning handled by main.css) */
 @media screen and (max-width: 960px) {
+
   /* Theme overrides for sidebar */
   #header {
     background: var(--bg-secondary) !important;
@@ -1014,9 +1032,12 @@ section header p {
 
 /* Animation utilities */
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
   }
+
   50% {
     box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
   }
