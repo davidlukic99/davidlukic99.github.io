@@ -477,6 +477,7 @@ section header p {
   grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   gap: var(--space-8);
   margin-top: var(--space-10);
+  align-items: stretch;
 }
 
 .project-card {
@@ -486,6 +487,9 @@ section header p {
   overflow: hidden;
   transition: all var(--transition);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card::before {
@@ -559,6 +563,9 @@ section header p {
 
 .project-content {
   padding: var(--space-6);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-content h3 {
@@ -1030,4 +1037,39 @@ section header p {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--indigo-500);
+}
+
+/* Navigation styling with icons */
+#nav ul li a {
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  margin: 0.2em 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+}
+
+#nav ul li a span {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+#nav ul li a:hover span {
+  color: var(--text-primary);
+}
+
+#nav ul li a .icon {
+  color: var(--indigo-400);
+  font-size: 1.1em;
+  width: 1.5em;
+  text-align: center;
+}
+
+#nav ul li a.active {
+  background: rgba(99, 102, 241, 0.15);
+}
+
+#nav ul li a.active .icon {
+  color: var(--indigo-300);
 }
