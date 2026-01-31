@@ -114,19 +114,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* Upwork Icon */
-.upwork-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.upwork-img {
-  width: 1rem;
-  height: 1rem;
-  object-fit: contain;
-}
-
 /* Profile Container */
 .profile-container {
   display: flex;
@@ -859,12 +846,6 @@ section header p {
   width: 1.5rem;
   height: 1.5rem;
   fill: currentColor;
-}
-
-.contact-icon img {
-  width: 1.25rem;
-  height: 1.25rem;
-  object-fit: contain;
 }
 
 .contact-card:hover .contact-icon {
