@@ -114,6 +114,19 @@ body {
   transform: translateY(-2px);
 }
 
+/* Upwork Icon */
+.upwork-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upwork-logo {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+}
+
 /* Profile Container */
 .profile-container {
   display: flex;
@@ -486,6 +499,31 @@ section header p {
   border-color: var(--indigo-500);
 }
 
+/* Stack Section Groups */
+.stack-section {
+  margin-top: var(--space-10);
+}
+
+.stack-section:first-of-type {
+  margin-top: var(--space-8);
+}
+
+.stack-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-bottom: var(--space-4);
+  border-bottom: 2px solid var(--border-subtle);
+}
+
+.stack-section-title i {
+  color: var(--indigo-400);
+}
+
 /* PROJECTS */
 .projects-container {
   display: grid;
@@ -807,6 +845,12 @@ section header p {
   color: var(--indigo-400);
   margin-bottom: var(--space-4);
   transition: all var(--transition);
+}
+
+.contact-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
 }
 
 .contact-card:hover .contact-icon {

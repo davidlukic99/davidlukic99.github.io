@@ -75,7 +75,7 @@
                         <ul class="icons" role="list" aria-label="Social media links">
                             <li><a href="https://github.com/davidlukic99" class="icon brands fa-github" target="_blank" rel="noopener noreferrer" aria-label="Visit David's GitHub profile"><span class="label">Github</span></a></li>
                             <li><a href="https://www.linkedin.com/in/davidlukic99/" class="icon brands fa-linkedin" target="_blank" rel="noopener noreferrer" aria-label="Visit David's LinkedIn profile"><span class="label">LinkedIn</span></a></li>
-                            <li><a href="https://www.upwork.com/freelancers/davidlukic99" class="icon brands fa-upwork" target="_blank" rel="noopener noreferrer" aria-label="Visit David's Upwork profile"><span class="label">Upwork</span></a></li>
+                            <li><a href="https://www.upwork.com/freelancers/davidlukic99" class="icon upwork-icon" target="_blank" rel="noopener noreferrer" aria-label="Visit David's Upwork profile"><svg class="upwork-logo" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.077.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.703-2.704 2.703zm0-7.347c-2.552 0-4.627 2.074-4.627 4.627 0 .983.308 1.894.833 2.646-.632.857-1.396 1.489-2.228 1.792-.277.1-.563.157-.856.157-1.491 0-2.703-1.212-2.703-2.703 0-1.492 1.212-2.703 2.703-2.703.293 0 .579.058.856.157.832.303 1.596.935 2.228 1.792-.525.752-.833 1.663-.833 2.646 0 2.552 2.075 4.627 4.627 4.627s4.627-2.074 4.627-4.627-2.075-4.627-4.627-4.627zM6.539 17.017c-2.552 0-4.627-2.074-4.627-4.627 0-2.552 2.075-4.627 4.627-4.627.293 0 .579.058.856.157.832.303 1.596.935 2.228 1.792-.525.752-.833 1.663-.833 2.646 0 2.552 2.075 4.627 4.627 4.627.293 0 .579-.058.856-.157.832-.303 1.596-.935 2.228-1.792-.525-.752-.833-1.663-.833-2.646 0-2.553 2.075-4.627 4.627-4.627 2.552 0 4.627 2.074 4.627 4.627 0 2.552-2.075 4.627-4.627 4.627z"/></svg><span class="label">Upwork</span></a></li>
                             <li><a href="mailto:ldavid797@gmail.com" class="icon solid fa-envelope" aria-label="Send email to David"><span class="label">Email</span></a></li>
                         </ul>
                 </div>
@@ -108,114 +108,126 @@
                         <div class="container">
                             <header>
                                 <h2>The Stack</h2>
-                                <p>Technologies and tools I use to build production-ready AI systems</p>
+                                <p>Data Engineering and AI/LLM technologies I use to build production-ready systems</p>
                             </header>
 
-                            <div class="stack-grid">
-                                <!-- Data Orchestration -->
-                                <div class="stack-card fade-in">
-                                    <div class="stack-card-header">
-                                        <div class="stack-icon orchestration">
-                                            <i class="fas fa-project-diagram"></i>
+                            <!-- Data Engineering Section -->
+                            <div class="stack-section">
+                                <h3 class="stack-section-title">
+                                    <i class="fas fa-database"></i> Data Engineering
+                                </h3>
+                                <div class="stack-grid">
+                                    <!-- Data Orchestration -->
+                                    <div class="stack-card fade-in">
+                                        <div class="stack-card-header">
+                                            <div class="stack-icon orchestration">
+                                                <i class="fas fa-project-diagram"></i>
+                                            </div>
+                                            <h3>Data Orchestration</h3>
                                         </div>
-                                        <h3>Data Orchestration</h3>
+                                        <div class="stack-tags">
+                                            <span class="stack-tag">Apache Airflow</span>
+                                            <span class="stack-tag">Dagster</span>
+                                            <span class="stack-tag">Prefect</span>
+                                            <span class="stack-tag">Kubernetes</span>
+                                            <span class="stack-tag">Argo Workflows</span>
+                                        </div>
                                     </div>
-                                    <div class="stack-tags">
-                                        <span class="stack-tag">Apache Airflow</span>
-                                        <span class="stack-tag">Dagster</span>
-                                        <span class="stack-tag">Prefect</span>
-                                        <span class="stack-tag">Kubernetes</span>
-                                        <span class="stack-tag">Argo Workflows</span>
+
+                                    <!-- Data Processing -->
+                                    <div class="stack-card fade-in delay-1">
+                                        <div class="stack-card-header">
+                                            <div class="stack-icon processing">
+                                                <i class="fas fa-cogs"></i>
+                                            </div>
+                                            <h3>Data Processing</h3>
+                                        </div>
+                                        <div class="stack-tags">
+                                            <span class="stack-tag">Python</span>
+                                            <span class="stack-tag">Pandas</span>
+                                            <span class="stack-tag">Polars</span>
+                                            <span class="stack-tag">Apache Spark</span>
+                                            <span class="stack-tag">Ray</span>
+                                            <span class="stack-tag">Dask</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Cloud Infrastructure -->
+                                    <div class="stack-card fade-in delay-2">
+                                        <div class="stack-card-header">
+                                            <div class="stack-icon cloud">
+                                                <i class="fas fa-cloud"></i>
+                                            </div>
+                                            <h3>Cloud Infrastructure</h3>
+                                        </div>
+                                        <div class="stack-tags">
+                                            <span class="stack-tag">AWS</span>
+                                            <span class="stack-tag">GCP</span>
+                                            <span class="stack-tag">Azure</span>
+                                            <span class="stack-tag">Docker</span>
+                                            <span class="stack-tag">Kubernetes</span>
+                                            <span class="stack-tag">Terraform</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Model Evaluation & ETL -->
+                                    <div class="stack-card fade-in delay-3">
+                                        <div class="stack-card-header">
+                                            <div class="stack-icon evaluation">
+                                                <i class="fas fa-chart-line"></i>
+                                            </div>
+                                            <h3>Model Evaluation & ETL</h3>
+                                        </div>
+                                        <div class="stack-tags">
+                                            <span class="stack-tag">MLflow</span>
+                                            <span class="stack-tag">Weights & Biases</span>
+                                            <span class="stack-tag">Great Expectations</span>
+                                            <span class="stack-tag">dbt</span>
+                                            <span class="stack-tag">SQLGlot</span>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
 
-                                <!-- LLM Ops -->
-                                <div class="stack-card fade-in delay-1">
-                                    <div class="stack-card-header">
-                                        <div class="stack-icon llm">
-                                            <i class="fas fa-brain"></i>
+                            <!-- AI & LLM Ops Section -->
+                            <div class="stack-section">
+                                <h3 class="stack-section-title">
+                                    <i class="fas fa-brain"></i> AI & LLM Ops
+                                </h3>
+                                <div class="stack-grid">
+                                    <!-- LLM Ops -->
+                                    <div class="stack-card fade-in">
+                                        <div class="stack-card-header">
+                                            <div class="stack-icon llm">
+                                                <i class="fas fa-brain"></i>
+                                            </div>
+                                            <h3>LLM Ops</h3>
                                         </div>
-                                        <h3>LLM Ops</h3>
+                                        <div class="stack-tags">
+                                            <span class="stack-tag">LangChain</span>
+                                            <span class="stack-tag">LlamaIndex</span>
+                                            <span class="stack-tag">OpenAI</span>
+                                            <span class="stack-tag">Ollama</span>
+                                            <span class="stack-tag">vLLM</span>
+                                        </div>
                                     </div>
-                                    <div class="stack-tags">
-                                        <span class="stack-tag">LangChain</span>
-                                        <span class="stack-tag">LlamaIndex</span>
-                                        <span class="stack-tag">OpenAI</span>
-                                        <span class="stack-tag">Hugging Face</span>
-                                        <span class="stack-tag">Ollama</span>
-                                        <span class="stack-tag">vLLM</span>
-                                    </div>
-                                </div>
 
-                                <!-- Vector Databases -->
-                                <div class="stack-card fade-in delay-2">
-                                    <div class="stack-card-header">
-                                        <div class="stack-icon vector">
-                                            <i class="fas fa-database"></i>
+                                    <!-- Vector Databases -->
+                                    <div class="stack-card fade-in delay-1">
+                                        <div class="stack-card-header">
+                                            <div class="stack-icon vector">
+                                                <i class="fas fa-database"></i>
+                                            </div>
+                                            <h3>Vector Databases</h3>
                                         </div>
-                                        <h3>Vector Databases</h3>
-                                    </div>
-                                    <div class="stack-tags">
-                                        <span class="stack-tag">Pinecone</span>
-                                        <span class="stack-tag">Weaviate</span>
-                                        <span class="stack-tag">Chroma</span>
-                                        <span class="stack-tag">FAISS</span>
-                                        <span class="stack-tag">Milvus</span>
-                                        <span class="stack-tag">Qdrant</span>
-                                    </div>
-                                </div>
-
-                                <!-- Cloud Infrastructure -->
-                                <div class="stack-card fade-in delay-3">
-                                    <div class="stack-card-header">
-                                        <div class="stack-icon cloud">
-                                            <i class="fas fa-cloud"></i>
+                                        <div class="stack-tags">
+                                            <span class="stack-tag">Pinecone</span>
+                                            <span class="stack-tag">Weaviate</span>
+                                            <span class="stack-tag">Chroma</span>
+                                            <span class="stack-tag">FAISS</span>
+                                            <span class="stack-tag">Milvus</span>
+                                            <span class="stack-tag">Qdrant</span>
                                         </div>
-                                        <h3>Cloud Infrastructure</h3>
-                                    </div>
-                                    <div class="stack-tags">
-                                        <span class="stack-tag">AWS</span>
-                                        <span class="stack-tag">GCP</span>
-                                        <span class="stack-tag">Azure</span>
-                                        <span class="stack-tag">Docker</span>
-                                        <span class="stack-tag">Kubernetes</span>
-                                        <span class="stack-tag">Terraform</span>
-                                    </div>
-                                </div>
-
-                                <!-- Data Processing -->
-                                <div class="stack-card fade-in delay-4">
-                                    <div class="stack-card-header">
-                                        <div class="stack-icon processing">
-                                            <i class="fas fa-cogs"></i>
-                                        </div>
-                                        <h3>Data Processing</h3>
-                                    </div>
-                                    <div class="stack-tags">
-                                        <span class="stack-tag">Python</span>
-                                        <span class="stack-tag">Pandas</span>
-                                        <span class="stack-tag">Polars</span>
-                                        <span class="stack-tag">Apache Spark</span>
-                                        <span class="stack-tag">Ray</span>
-                                        <span class="stack-tag">Dask</span>
-                                    </div>
-                                </div>
-
-                                <!-- Model Evaluation & ETL -->
-                                <div class="stack-card fade-in delay-5">
-                                    <div class="stack-card-header">
-                                        <div class="stack-icon evaluation">
-                                            <i class="fas fa-chart-line"></i>
-                                        </div>
-                                        <h3>Model Evaluation & ETL</h3>
-                                    </div>
-                                    <div class="stack-tags">
-                                        <span class="stack-tag">MLflow</span>
-                                        <span class="stack-tag">Weights & Biases</span>
-                                        <span class="stack-tag">Great Expectations</span>
-                                        <span class="stack-tag">Airflow</span>
-                                        <span class="stack-tag">dbt</span>
-                                        <span class="stack-tag">SQLGlot</span>
                                     </div>
                                 </div>
                             </div>
@@ -476,7 +488,7 @@
 
                                     <a href="https://www.upwork.com/freelancers/davidlukic99" target="_blank" class="contact-card">
                                         <div class="contact-icon">
-                                            <i class="fab fa-upwork"></i>
+                                            <svg class="upwork-logo" viewBox="0 0 24 24" fill="currentColor"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.077.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.703-2.704 2.703zm0-7.347c-2.552 0-4.627 2.074-4.627 4.627 0 .983.308 1.894.833 2.646-.632.857-1.396 1.489-2.228 1.792-.277.1-.563.157-.856.157-1.491 0-2.703-1.212-2.703-2.703 0-1.492 1.212-2.703 2.703-2.703.293 0 .579.058.856.157.832.303 1.596.935 2.228 1.792-.525.752-.833 1.663-.833 2.646 0 2.552 2.075 4.627 4.627 4.627s4.627-2.074 4.627-4.627-2.075-4.627-4.627-4.627zM6.539 17.017c-2.552 0-4.627-2.074-4.627-4.627 0-2.552 2.075-4.627 4.627-4.627.293 0 .579.058.856.157.832.303 1.596.935 2.228 1.792-.525.752-.833 1.663-.833 2.646 0 2.552 2.075 4.627 4.627 4.627.293 0 .579-.058.856-.157.832-.303 1.596-.935 2.228-1.792-.525-.752-.833-1.663-.833-2.646 0-2.553 2.075-4.627 4.627-4.627 2.552 0 4.627 2.074 4.627 4.627 0 2.552-2.075 4.627-4.627 4.627z"/></svg>
                                         </div>
                                         <h3>Upwork</h3>
                                         <p>Hire me on Upwork</p>
