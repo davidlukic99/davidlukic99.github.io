@@ -121,10 +121,10 @@ body {
   justify-content: center;
 }
 
-.upwork-logo {
+.upwork-img {
   width: 1.25rem;
   height: 1.25rem;
-  fill: currentColor;
+  object-fit: contain;
 }
 
 /* Profile Container */
@@ -468,6 +468,14 @@ section header p {
 
 .stack-icon.evaluation {
   background: linear-gradient(135deg, #ec4899, #db2777);
+}
+
+.stack-icon.ml {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+}
+
+.stack-icon.embedding {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
 }
 
 .stack-card h3 {
@@ -851,6 +859,12 @@ section header p {
   width: 1.5rem;
   height: 1.5rem;
   fill: currentColor;
+}
+
+.contact-icon img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
 }
 
 .contact-card:hover .contact-icon {
