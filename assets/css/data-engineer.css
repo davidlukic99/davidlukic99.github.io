@@ -122,8 +122,8 @@ body {
 }
 
 .upwork-img {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1rem;
+  height: 1rem;
   object-fit: contain;
 }
 
@@ -862,8 +862,8 @@ section header p {
 }
 
 .contact-icon img {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   object-fit: contain;
 }
 
