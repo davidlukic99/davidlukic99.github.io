@@ -1,0 +1,64 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+import experience from "../../content/experience.json";
+---
+
+<section id="experience" class="py-20 lg:py-28">
+  <div class="mx-auto max-w-6xl px-5 lg:px-8">
+    <SectionHeader
+      eyebrow="// 02 · experience"
+      title="Where I've been shipping."
+      lede="Six roles across AI engineering, full-stack, and data — a track record of owning production systems end-to-end."
+    />
+
+    <ol class="relative space-y-8 lg:space-y-10" role="list">
+      <div aria-hidden="true" class="absolute left-[7px] top-2 bottom-2 w-px bg-gradient-to-b from-transparent via-[color:var(--color-border-strong)] to-transparent lg:left-[11px]"></div>
+
+      {
+        experience.map((role, i) => (
+          <li class="reveal relative pl-8 lg:pl-12" style={`--reveal-delay: ${i * 60}ms`}>
+            <span class="absolute left-0 top-1.5 inline-flex items-center justify-center">
+              <span class="absolute w-5 h-5 rounded-full bg-[color:var(--color-accent)]/20 animate-pulse lg:w-6 lg:h-6"></span>
+              <span class="relative w-[14px] h-[14px] rounded-full bg-[color:var(--color-bg)] border-2 border-[color:var(--color-accent)] lg:w-[18px] lg:h-[18px]"></span>
+            </span>
+
+            <div class="card p-5 lg:p-7">
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-3">
+                <div>
+                  <h3 class="text-lg lg:text-xl font-semibold text-[color:var(--color-text)]">
+                    {role.title}
+                  </h3>
+                  <p class="text-sm text-[color:var(--color-accent-3)] font-medium mt-0.5">
+                    {role.company}
+                  </p>
+                </div>
+                <span class="font-mono text-xs text-[color:var(--color-text-dim)] flex-shrink-0">
+                  {role.period}
+                </span>
+              </div>
+
+              {role.meta && (
+                <p class="text-xs italic text-[color:var(--color-text-dim)] mb-3">{role.meta}</p>
+              )}
+
+              <ul class="space-y-2 text-sm lg:text-[0.95rem] text-[color:var(--color-text-muted)] leading-relaxed">
+                {role.highlights.map((h) => (
+                  <li class="flex gap-2.5">
+                    <span class="flex-shrink-0 mt-2 w-1 h-1 rounded-full bg-[color:var(--color-text-dim)]"></span>
+                    <span>{h}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                {role.stack.map((s) => (
+                  <span class="chip">{s}</span>
+                ))}
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

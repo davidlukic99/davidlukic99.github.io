@@ -1,0 +1,24 @@
+{
+  "name": "davidlukic99-portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fontsource/geist-mono": "^5.2.7",
+    "@fontsource/geist-sans": "^5.2.5",
+    "@iconify-json/lucide": "^1.2.103",
+    "@iconify-json/simple-icons": "^1.2.79",
+    "@tailwindcss/vite": "^4.2.4",
+    "astro": "^6.1.9",
+    "astro-icon": "^1.1.5",
+    "tailwindcss": "^4.2.4"
+  }
+}

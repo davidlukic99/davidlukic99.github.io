@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Multi-Agent Production Support System",
+    "org": "OnTheGoSystems",
+    "blurb": "~10 autonomous agents serving roughly 500K users — handling refunds, how-to support, ticket triage, bug reports, and credit queries. Multi-provider routing balances cost and latency per agent role.",
+    "metric": "~500K users",
+    "stack": ["CrewAI", "AWS Bedrock", "FastAPI", "Docker", "ECS", "OpenAI", "Anthropic", "Gemini"],
+    "role": "Senior AI Engineer",
+    "period": "Oct 2025 — Apr 2026",
+    "accent": "indigo"
+  },
+  {
+    "title": "Hybrid RAG + MCP Data Platform",
+    "org": "BetterCollective",
+    "blurb": "Internal Model Context Protocol server unifying MySQL, S3, Google Drive, and Sheets behind a natural-language interface. Analysts get instant SQL execution, default visualizations, and a custom Power BI–style dashboard builder.",
+    "metric": "Replaced dev-gated reporting",
+    "stack": ["FastMCP", "FastAPI", "Django", "Vector DB", "MySQL", "S3"],
+    "role": "Senior AI Engineer",
+    "period": "2025",
+    "accent": "violet"
+  },
+  {
+    "title": "Multi-Agent SEO Content Pipeline",
+    "org": "BetterCollective",
+    "blurb": "End-to-end CrewAI system with ~8 autonomous agents covering research, analysis, scraping, and writing — running the entire content pipeline without human hand-off.",
+    "metric": "~8 CrewAI agents",
+    "stack": ["CrewAI", "FastAPI", "Docker", "Pydantic", "Python"],
+    "role": "Senior AI Engineer",
+    "period": "2025",
+    "accent": "cyan"
+  },
+  {
+    "title": "Compliance Report AI",
+    "org": "ComplianceLabX",
+    "blurb": "Production AI grading client materials against regulatory requirements. Every finding is source-attributed; guardrails track groundedness, citation accuracy, and hallucination rate end-to-end.",
+    "metric": "Auditable outputs",
+    "stack": ["RAG", "Guardrails", "Evaluation", "Python", "Async"],
+    "role": "Senior AI Engineer (Part-time)",
+    "period": "2025 — Present",
+    "accent": "indigo"
+  },
+  {
+    "title": "knowtheprice.com.au",
+    "org": "Founder — Independent",
+    "blurb": "Full-stack, real-time price comparison platform I built and shipped end-to-end. Next.js front-end, Supabase back-end, Vercel deploy — designed to stay fast and cheap at scale.",
+    "metric": "Founder project",
+    "stack": ["Next.js", "Supabase", "Vercel", "TypeScript", "PostgreSQL"],
+    "role": "Founder & Engineer",
+    "period": "2024 — Present",
+    "link": "https://knowtheprice.com.au",
+    "accent": "violet"
+  }
+]

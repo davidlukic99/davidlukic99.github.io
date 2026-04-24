@@ -1,0 +1,117 @@
+[
+  {
+    "group": "AI & LLM Engineering",
+    "items": [
+      { "name": "LangChain", "icon": "simple-icons:langchain" },
+      { "name": "LangGraph" },
+      { "name": "LlamaIndex" },
+      { "name": "CrewAI" },
+      { "name": "DSPy" },
+      { "name": "MCP (Model Context Protocol)" },
+      { "name": "FastMCP" },
+      { "name": "RAG" },
+      { "name": "Multi-Agent Systems" },
+      { "name": "Prompt Engineering" },
+      { "name": "LLM Evaluation" },
+      { "name": "Observability & Guardrails" },
+      { "name": "LangFuse" },
+      { "name": "LangSmith" },
+      { "name": "Pinecone" },
+      { "name": "Weaviate" },
+      { "name": "PGVector" },
+      { "name": "Hybrid / Semantic Search" }
+    ]
+  },
+  {
+    "group": "LLM Providers",
+    "items": [
+      { "name": "OpenAI API", "icon": "simple-icons:openai" },
+      { "name": "Anthropic Claude", "icon": "simple-icons:anthropic" },
+      { "name": "Google Gemini", "icon": "simple-icons:googlegemini" },
+      { "name": "AWS Bedrock", "icon": "simple-icons:amazonwebservices" },
+      { "name": "Open-source LLMs" }
+    ]
+  },
+  {
+    "group": "Programming & Backend",
+    "items": [
+      { "name": "Python", "icon": "simple-icons:python" },
+      { "name": "SQL" },
+      { "name": "Bash", "icon": "simple-icons:gnubash" },
+      { "name": "FastAPI", "icon": "simple-icons:fastapi" },
+      { "name": "Django", "icon": "simple-icons:django" },
+      { "name": "Flask", "icon": "simple-icons:flask" },
+      { "name": "Pydantic", "icon": "simple-icons:pydantic" },
+      { "name": "Async Python" }
+    ]
+  },
+  {
+    "group": "Data Engineering",
+    "items": [
+      { "name": "Apache Spark (PySpark)", "icon": "simple-icons:apachespark" },
+      { "name": "Airflow", "icon": "simple-icons:apacheairflow" },
+      { "name": "Dagster" },
+      { "name": "dbt", "icon": "simple-icons:dbt" },
+      { "name": "Kafka", "icon": "simple-icons:apachekafka" },
+      { "name": "Delta Lake" },
+      { "name": "ETL / ELT" },
+      { "name": "Data Modeling" },
+      { "name": "Data Warehousing" },
+      { "name": "pandas", "icon": "simple-icons:pandas" },
+      { "name": "Polars" },
+      { "name": "NumPy", "icon": "simple-icons:numpy" },
+      { "name": "Real-time Pipelines" }
+    ]
+  },
+  {
+    "group": "Cloud & Infrastructure",
+    "items": [
+      { "name": "AWS (Bedrock, SageMaker, Lambda, ECS, S3, Redshift)", "icon": "simple-icons:amazonwebservices" },
+      { "name": "Azure" },
+      { "name": "Google Cloud", "icon": "simple-icons:googlecloud" },
+      { "name": "Databricks", "icon": "simple-icons:databricks" },
+      { "name": "Snowflake", "icon": "simple-icons:snowflake" },
+      { "name": "Vercel", "icon": "simple-icons:vercel" },
+      { "name": "Supabase", "icon": "simple-icons:supabase" }
+    ]
+  },
+  {
+    "group": "MLOps & DevOps",
+    "items": [
+      { "name": "Docker", "icon": "simple-icons:docker" },
+      { "name": "Kubernetes", "icon": "simple-icons:kubernetes" },
+      { "name": "MLflow", "icon": "simple-icons:mlflow" },
+      { "name": "CI/CD (GitHub Actions)", "icon": "simple-icons:githubactions" },
+      { "name": "Poetry", "icon": "simple-icons:poetry" },
+      { "name": "pytest", "icon": "simple-icons:pytest" },
+      { "name": "mypy" },
+      { "name": "ruff / black" },
+      { "name": "Git", "icon": "simple-icons:git" },
+      { "name": "Linux", "icon": "simple-icons:linux" },
+      { "name": "Web Scraping" },
+      { "name": "Celery", "icon": "simple-icons:celery" }
+    ]
+  },
+  {
+    "group": "Databases",
+    "items": [
+      { "name": "PostgreSQL", "icon": "simple-icons:postgresql" },
+      { "name": "DuckDB", "icon": "simple-icons:duckdb" },
+      { "name": "MongoDB", "icon": "simple-icons:mongodb" },
+      { "name": "MariaDB", "icon": "simple-icons:mariadb" },
+      { "name": "Redis", "icon": "simple-icons:redis" },
+      { "name": "S3" },
+      { "name": "Delta Lake" }
+    ]
+  },
+  {
+    "group": "Visualization & BI",
+    "items": [
+      { "name": "Power BI" },
+      { "name": "Plotly Dash", "icon": "simple-icons:plotly" },
+      { "name": "Streamlit", "icon": "simple-icons:streamlit" },
+      { "name": "Matplotlib" },
+      { "name": "Seaborn" }
+    ]
+  }
+]

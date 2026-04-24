@@ -1,0 +1,94 @@
+---
+const metrics = [
+  { value: "7+", label: "years shipping" },
+  { value: "~500K", label: "users served" },
+  { value: "100%", label: "Upwork JSS" },
+  { value: "Top Rated", label: "Freelancer" },
+];
+---
+
+<section id="top" class="relative pt-16 pb-20 sm:pt-24 sm:pb-28 lg:pt-32 lg:pb-36">
+  <div class="mx-auto max-w-6xl px-5 lg:px-8">
+    <div class="grid lg:grid-cols-[1.5fr_1fr] gap-12 lg:gap-16 items-center">
+      <div class="reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[color:var(--color-border)] bg-[color:var(--color-bg-elev)]/60 mb-6">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[color:var(--color-accent-2)] opacity-60"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-[color:var(--color-accent-2)]"></span>
+          </span>
+          <span class="font-mono text-xs text-[color:var(--color-text-muted)]">Available for new AI engineering roles</span>
+        </div>
+
+        <p class="eyebrow">// senior ai engineer</p>
+
+        <h1 class="mt-3 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight leading-[1.05]">
+          Shipping <span class="gradient-text">production LLM</span><br class="hidden sm:inline" />
+          and <span class="gradient-text">multi-agent systems</span>.
+        </h1>
+
+        <p class="mt-6 max-w-xl text-lg text-[color:var(--color-text-muted)] leading-relaxed">
+          I'm <span class="text-[color:var(--color-text)]">David Lukić</span> — a Senior AI Engineer with 7+ years designing, shipping, and observing RAG, MCP, and multi-agent systems in production.
+          From prototype to ~500K users, with evaluation, guardrails, and cost-latency tuning baked in.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#contact" class="btn btn-primary">
+            Start a conversation
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="/David_Lukic.pdf" target="_blank" rel="noopener" class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download CV
+          </a>
+          <a href="#projects" class="btn btn-ghost">
+            View work →
+          </a>
+        </div>
+
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-xl">
+          {metrics.map((m) => (
+            <div class="flex flex-col gap-1">
+              <div class="text-xl sm:text-2xl font-semibold tracking-tight text-[color:var(--color-text)]">{m.value}</div>
+              <div class="font-mono text-[11px] text-[color:var(--color-text-dim)] uppercase tracking-wider">{m.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="relative hidden lg:block reveal" style="--reveal-delay: 150ms">
+        <div class="relative aspect-square rounded-2xl p-6 card overflow-hidden">
+          <div class="absolute inset-0 opacity-50" style="background:
+            radial-gradient(circle at 30% 20%, rgba(99,102,241,0.25), transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(34,211,238,0.2), transparent 50%);"></div>
+
+          <div class="relative h-full flex flex-col justify-between font-mono text-xs">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-500/60"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/60"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-green-500/60"></span>
+              <span class="ml-2 text-[color:var(--color-text-dim)]">~/agents/ops.log</span>
+            </div>
+
+            <div class="space-y-2 leading-relaxed text-[color:var(--color-text-muted)]">
+              <div><span class="text-[color:var(--color-accent-2)]">$</span> <span class="text-[color:var(--color-text)]">agent.route</span> <span class="text-[color:var(--color-text-dim)]">--provider=bedrock</span></div>
+              <div class="text-[color:var(--color-text-dim)]">› routed in 142ms</div>
+              <div><span class="text-[color:var(--color-accent-2)]">$</span> <span class="text-[color:var(--color-text)]">rag.query</span> <span class="text-[color:var(--color-text-dim)]">"compliance evidence"</span></div>
+              <div class="text-[color:var(--color-text-dim)]">› 12 chunks · groundedness 0.94</div>
+              <div><span class="text-[color:var(--color-accent-2)]">$</span> <span class="text-[color:var(--color-text)]">eval.run</span> <span class="text-[color:var(--color-text-dim)]">--suite=prod</span></div>
+              <div class="text-[color:var(--color-text-dim)]">› 248/250 passed · p95 1.8s</div>
+              <div><span class="text-[color:var(--color-accent-3)]">●</span> <span class="text-[color:var(--color-text)]">observability</span> <span class="text-[color:var(--color-text-dim)]">langfuse + langsmith</span></div>
+            </div>
+
+            <div class="flex items-center justify-between pt-4 border-t border-[color:var(--color-border)] text-[color:var(--color-text-dim)]">
+              <span>10 agents · 500K users</span>
+              <span class="flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
+                healthy
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

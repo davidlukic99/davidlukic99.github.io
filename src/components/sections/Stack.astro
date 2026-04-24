@@ -1,0 +1,91 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+import skills from "../../content/skills.json";
+import { Icon } from "astro-icon/components";
+---
+
+<section id="stack" class="py-20 lg:py-28">
+  <div class="mx-auto max-w-6xl px-5 lg:px-8">
+    <SectionHeader
+      eyebrow="// 04 · stack"
+      title="The toolbox."
+      lede="What I reach for when designing production AI and data systems."
+    />
+
+    <div class="card p-5 lg:p-8">
+      <div
+        class="flex flex-wrap gap-2 mb-8 border-b border-[color:var(--color-border)] pb-5"
+        id="stack-filters"
+        role="tablist"
+        aria-label="Filter stack by category"
+      >
+        <button
+          type="button"
+          class="chip chip-accent data-[active]:!bg-[color:var(--color-accent)]/25 data-[active]:!border-[color:var(--color-accent)] data-[active]:!text-white transition-colors"
+          data-filter="all"
+          data-active
+        >
+          All
+        </button>
+        {
+          skills.map((group) => (
+            <button
+              type="button"
+              class="chip hover:!border-[color:var(--color-border-strong)] hover:!text-[color:var(--color-text)] data-[active]:!bg-[color:var(--color-accent)]/15 data-[active]:!border-[color:var(--color-accent)]/50 data-[active]:!text-white transition-colors"
+              data-filter={group.group}
+            >
+              {group.group}
+            </button>
+          ))
+        }
+      </div>
+
+      <div class="space-y-8" id="stack-groups">
+        {
+          skills.map((group) => (
+            <div class="stack-group" data-group={group.group}>
+              <h3 class="font-mono text-xs uppercase tracking-widest text-[color:var(--color-text-dim)] mb-3">
+                {group.group}
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <span class="chip text-sm !py-1.5 !px-3 text-[color:var(--color-text)] hover:!border-[color:var(--color-border-strong)] transition-colors">
+                    {item.icon && (
+                      <Icon
+                        name={item.icon}
+                        class="w-3.5 h-3.5 text-[color:var(--color-text-muted)]"
+                      />
+                    )}
+                    {item.name}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (() => {
+    const filters = document.getElementById("stack-filters");
+    const groupsEl = document.getElementById("stack-groups");
+    if (!filters || !groupsEl) return;
+
+    filters.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-filter]");
+      if (!btn) return;
+      const filter = btn.getAttribute("data-filter");
+
+      filters.querySelectorAll("[data-filter]").forEach((b) => b.removeAttribute("data-active"));
+      btn.setAttribute("data-active", "");
+
+      groupsEl.querySelectorAll(".stack-group").forEach((g) => {
+        const match = filter === "all" || g.getAttribute("data-group") === filter;
+        g.style.display = match ? "" : "none";
+      });
+    });
+  })();
+</script>

@@ -1,85 +1,47 @@
-# David Lukić | AI Data Engineer
+# davidlukic99.github.io
 
-> Building the infrastructure for intelligence through scalable data pipelines, LLM operations, and vector databases.
+Personal portfolio — Senior AI Engineer · LLM & Multi-Agent Systems.
 
-## About
+Live at https://davidlukic99.github.io.
 
-I'm David Lukić, an AI Data Engineer specializing in LLM Ops, RAG Pipelines, and Vector Databases. I build production-ready AI systems that scale.
+## Stack
 
-**Current Focus:**
-- RAG (Retrieval-Augmented Generation) pipeline architecture
-- LLM fine-tuning and deployment
-- Vector database optimization at scale
-- Data orchestration with Airflow and Dagster
-- Real-time ML inference systems
+- **Astro 5** — static site generator, zero-JS by default
+- **Tailwind 4** — CSS-first design tokens
+- **astro-icon** — inline SVG icons (Lucide, Simple Icons)
+- **Geist Sans / Geist Mono** — self-hosted via `@fontsource`
+- Deployed via **GitHub Actions** to GitHub Pages
 
-## Experience
+## Local development
 
-- **BetterCollective** (2025 - Present) | AI Engineer
-- **index.dev** (2024 - 2025) | Data Engineer
-- **Upwork** (2020 - Present) | Freelance Data Engineer
+```bash
+npm install
+npm run dev        # http://localhost:4321
+npm run build      # output in dist/
+npm run preview    # serve the built dist/
+```
 
-## Tech Stack
+Requires Node `>=22.12`.
 
-### Data Orchestration
-- Apache Airflow, Dagster, Prefect
-- Kubernetes, Argo Workflows
+## Updating content
 
-### LLM Ops
-- LangChain, LlamaIndex
-- OpenAI, Hugging Face
-- Ollama, vLLM
+Content is data-driven — update JSON files, not component markup:
 
-### Vector Databases
-- Pinecone, Weaviate, Chroma
-- FAISS, Milvus, Qdrant
+- `src/content/experience.json` — roles, periods, highlights, stack
+- `src/content/projects.json`  — featured work
+- `src/content/skills.json`    — grouped tech stack
 
-### Cloud Infrastructure
-- AWS, GCP, Azure
-- Docker, Kubernetes
-- Terraform
+Design tokens live in `src/styles/global.css` (`@theme` block).
 
-### Data Processing
-- Python, Pandas, Polars
-- Apache Spark, Ray, Dask
+## Deploy
 
-### Model Evaluation & ETL
-- MLflow, Weights & Biases
-- Great Expectations, dbt
+Commits to `master` trigger `.github/workflows/deploy.yml`, which builds the site
+and publishes to GitHub Pages.
 
-## Portfolio
+**One-time setup** in GitHub: *Settings → Pages → Build and deployment →
+Source: **GitHub Actions***.
 
-This portfolio showcases my work in:
-- Enterprise RAG Pipelines
-- LLM Fine-tuning Platforms
-- Real-time ML Inference
-- Vector Search Systems
-- Data Lake Optimization
-- ML Experiment Tracking
+## CV
 
-## Contact
-
-- **Email:** ldavid797@gmail.com
-- **LinkedIn:** [linkedin.com/in/davidlukic99](https://www.linkedin.com/in/davidlukic99/)
-- **GitHub:** [github.com/davidlukic99](https://github.com/davidlukic99)
-- **Upwork:** [upwork.com/freelancers/davidlukic99](https://www.upwork.com/freelancers/davidlukic99)
-
-## Credits
-
-### Template
-- **Prologue** by HTML5 UP ([html5up.net](https://html5up.net))
-- License: Creative Commons Attribution 3.0 Unported (CC BY 3.0)
-
-### Icons & Fonts
-- **Font Awesome** ([fontawesome.io](https://fontawesome.io))
-- **Devicon** ([devicon.dev](https://devicon.dev))
-- **Inter Font** by Google Fonts
-
-### Libraries
-- jQuery
-- Scrollex
-- Responsive Tools
-
----
-
-*Last updated: January 2026*
+The source of truth is `public/David_Lukic.pdf`, served at
+`https://davidlukic99.github.io/David_Lukic.pdf`.

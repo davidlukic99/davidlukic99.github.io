@@ -1,0 +1,139 @@
+---
+const sections = [
+  { id: "#about", label: "About" },
+  { id: "#experience", label: "Experience" },
+  { id: "#projects", label: "Work" },
+  { id: "#stack", label: "Stack" },
+  { id: "#writing", label: "Writing" },
+  { id: "#contact", label: "Contact" },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 border-b border-transparent transition-colors" id="site-header">
+  <div class="glass !border-t-0 !border-x-0 !border-b border-[color:var(--color-border)]">
+    <div class="mx-auto max-w-6xl px-5 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <a href="#top" class="flex items-center gap-2.5 group" aria-label="David Lukić — Home">
+        <span
+          class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-[color:var(--color-border-strong)] bg-[color:var(--color-bg-elev)] font-mono text-sm group-hover:border-[color:var(--color-accent)] transition-colors"
+        >
+          dl
+        </span>
+        <span class="hidden sm:inline text-sm font-medium text-[color:var(--color-text)]">
+          David Lukić<span class="text-[color:var(--color-text-dim)]"> · AI Engineer</span>
+        </span>
+      </a>
+
+      <nav aria-label="Primary" class="hidden md:block">
+        <ul class="flex items-center gap-1">
+          {
+            sections.map((s) => (
+              <li>
+                <a
+                  href={s.id}
+                  data-nav-link
+                  class="px-3 py-2 text-sm text-[color:var(--color-text-muted)] hover:text-[color:var(--color-text)] rounded-md transition-colors data-[active]:text-[color:var(--color-text)] relative"
+                >
+                  {s.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a
+          href="/David_Lukic.pdf"
+          target="_blank"
+          rel="noopener"
+          class="hidden sm:inline-flex btn btn-secondary !h-9 !px-3 text-sm"
+        >
+          CV
+        </a>
+        <a href="#contact" class="btn btn-primary !h-9 !px-4 text-sm">
+          Get in touch
+        </a>
+
+        <button
+          type="button"
+          class="md:hidden ml-1 inline-flex items-center justify-center w-10 h-10 rounded-md border border-[color:var(--color-border)] text-[color:var(--color-text)] hover:border-[color:var(--color-border-strong)]"
+          aria-label="Open menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          id="mobile-menu-toggle"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="4" y1="7" x2="20" y2="7"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="17" x2="20" y2="17"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    id="mobile-menu"
+    class="md:hidden fixed inset-x-0 top-16 bottom-0 bg-[color:var(--color-bg)]/95 backdrop-blur-lg hidden"
+    aria-hidden="true"
+  >
+    <div class="mx-auto max-w-6xl px-5 py-6">
+      <ul class="flex flex-col gap-1">
+        {
+          sections.map((s) => (
+            <li>
+              <a
+                href={s.id}
+                data-mobile-link
+                class="flex items-center justify-between py-3 px-4 rounded-lg text-[color:var(--color-text)] hover:bg-white/5 border border-transparent hover:border-[color:var(--color-border)]"
+              >
+                <span class="text-base">{s.label}</span>
+                <span class="font-mono text-xs text-[color:var(--color-text-dim)]">→</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="mt-6 flex gap-2">
+        <a href="/David_Lukic.pdf" target="_blank" rel="noopener" class="btn btn-secondary flex-1">Download CV</a>
+        <a href="#contact" data-mobile-link class="btn btn-primary flex-1">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div aria-hidden="true" class="h-16"></div>
+
+<script is:inline>
+  (() => {
+    const toggle = document.getElementById("mobile-menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+    if (!toggle || !menu) return;
+
+    const close = () => {
+      menu.classList.add("hidden");
+      menu.setAttribute("aria-hidden", "true");
+      toggle.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    };
+    const open = () => {
+      menu.classList.remove("hidden");
+      menu.setAttribute("aria-hidden", "false");
+      toggle.setAttribute("aria-expanded", "true");
+      document.body.style.overflow = "hidden";
+    };
+
+    toggle.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      expanded ? close() : open();
+    });
+
+    menu.querySelectorAll("[data-mobile-link]").forEach((a) => {
+      a.addEventListener("click", close);
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") close();
+    });
+  })();
+</script>

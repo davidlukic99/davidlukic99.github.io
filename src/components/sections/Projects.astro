@@ -1,0 +1,80 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+import projects from "../../content/projects.json";
+
+const accentColor = (a: string) => {
+  switch (a) {
+    case "indigo": return "from-[#6366f1]/20 to-transparent";
+    case "violet": return "from-[#a78bfa]/20 to-transparent";
+    case "cyan":   return "from-[#22d3ee]/20 to-transparent";
+    default:       return "from-[#6366f1]/20 to-transparent";
+  }
+};
+---
+
+<section id="projects" class="py-20 lg:py-28">
+  <div class="mx-auto max-w-6xl px-5 lg:px-8">
+    <SectionHeader
+      eyebrow="// 03 · work"
+      title="Selected production systems."
+      lede="Five builds that represent how I think about production AI — end-to-end ownership, measurable outcomes, and evaluation baked in."
+    />
+
+    <div class="grid md:grid-cols-2 gap-5 lg:gap-6">
+      {
+        projects.map((p, i) => (
+          <article
+            class={`card relative overflow-hidden p-6 lg:p-7 reveal ${i === 0 ? "md:col-span-2" : ""}`}
+            style={`--reveal-delay: ${i * 80}ms`}
+          >
+            <div class={`absolute inset-x-0 top-0 h-28 bg-gradient-to-b ${accentColor(p.accent)} pointer-events-none opacity-60`}></div>
+
+            <div class="relative flex flex-col h-full">
+              <div class="flex items-start justify-between gap-4 mb-3">
+                <div>
+                  <p class="font-mono text-xs text-[color:var(--color-text-dim)] mb-1">
+                    {p.org} · {p.period}
+                  </p>
+                  <h3 class="text-xl lg:text-2xl font-semibold tracking-tight text-[color:var(--color-text)]">
+                    {p.title}
+                  </h3>
+                </div>
+                {p.link && (
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener"
+                    class="flex-shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-lg border border-[color:var(--color-border)] text-[color:var(--color-text-muted)] hover:text-[color:var(--color-text)] hover:border-[color:var(--color-border-strong)] transition-colors"
+                    aria-label={`Open ${p.title} in new tab`}
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                )}
+              </div>
+
+              <p class="text-sm lg:text-[0.95rem] text-[color:var(--color-text-muted)] leading-relaxed mb-5 flex-1">
+                {p.blurb}
+              </p>
+
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                <div class="flex items-center gap-2 text-sm">
+                  <span class="font-mono text-xs text-[color:var(--color-text-dim)]">impact</span>
+                  <span class="text-[color:var(--color-accent-3)] font-medium">{p.metric}</span>
+                </div>
+
+                <div class="flex flex-wrap gap-1.5">
+                  {p.stack.slice(0, 4).map((s) => (
+                    <span class="chip text-[0.7rem]">{s}</span>
+                  ))}
+                  {p.stack.length > 4 && (
+                    <span class="chip text-[0.7rem]">+{p.stack.length - 4}</span>
+                  )}
+                </div>
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

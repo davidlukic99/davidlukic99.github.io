@@ -1,0 +1,14 @@
+---
+interface Props {
+  label: string;
+  accent?: boolean;
+  icon?: string;
+}
+const { label, accent = false, icon } = Astro.props;
+import { Icon } from "astro-icon/components";
+---
+
+<span class={`chip ${accent ? "chip-accent" : ""}`}>
+  {icon && <Icon name={icon} class="w-3.5 h-3.5" />}
+  {label}
+</span>

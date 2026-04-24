@@ -1,0 +1,49 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+
+const topics = [
+  "Designing production RAG: retrieval, reranking, and evaluation",
+  "Multi-agent orchestration with CrewAI — what works, what breaks",
+  "Model Context Protocol: patterns for real analyst workflows",
+  "LLM observability: groundedness, cost, and latency in one loop",
+];
+---
+
+<section id="writing" class="py-20 lg:py-28">
+  <div class="mx-auto max-w-6xl px-5 lg:px-8">
+    <SectionHeader
+      eyebrow="// 05 · writing"
+      title="Technical writing — in progress."
+      lede="Distilled notes from shipping production LLM systems. Coming soon."
+    />
+
+    <div class="card p-6 lg:p-10 reveal">
+      <div class="flex flex-col lg:flex-row gap-8 lg:items-center">
+        <div class="flex-shrink-0">
+          <div class="w-16 h-16 lg:w-20 lg:h-20 rounded-xl flex items-center justify-center border border-[color:var(--color-border-strong)] bg-[color:var(--color-bg-elev)]">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-[color:var(--color-accent-3)]"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+          </div>
+        </div>
+
+        <div class="flex-1">
+          <p class="text-base lg:text-lg text-[color:var(--color-text)] mb-4 leading-relaxed">
+            I'm drafting deep-dives on the lessons I've taken from running LLM systems in production. Topics on the list:
+          </p>
+
+          <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2.5 mb-6">
+            {topics.map((t) => (
+              <li class="flex items-start gap-2.5 text-sm text-[color:var(--color-text-muted)]">
+                <span class="flex-shrink-0 mt-1.5 w-1 h-1 rounded-full bg-[color:var(--color-accent-2)]"></span>
+                <span>{t}</span>
+              </li>
+            ))}
+          </ul>
+
+          <p class="font-mono text-xs text-[color:var(--color-text-dim)]">
+            → Want early access? Reach out below.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

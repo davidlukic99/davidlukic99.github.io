@@ -1,0 +1,58 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+
+const strengths = [
+  "Multi-agent system design",
+  "Production RAG & MCP servers",
+  "LLM evaluation, observability & guardrails",
+  "Cost & latency optimization",
+  "End-to-end ownership (prototype → production)",
+  "Senior data engineering (Airflow, dbt, Spark, Kafka, Snowflake)",
+];
+
+const providers = ["OpenAI", "Anthropic", "Gemini", "AWS Bedrock"];
+---
+
+<section id="about" class="py-20 lg:py-28">
+  <div class="mx-auto max-w-6xl px-5 lg:px-8">
+    <SectionHeader eyebrow="// 01 · about" title="What I do, and how I do it." />
+
+    <div class="grid lg:grid-cols-[1.5fr_1fr] gap-8 lg:gap-16 items-start">
+      <div class="reveal space-y-6 text-base lg:text-lg leading-relaxed text-[color:var(--color-text-muted)]">
+        <p>
+          I'm a <span class="text-[color:var(--color-text)]">Senior AI Engineer</span> and <span class="text-[color:var(--color-text)]">Senior Data Engineer</span> with 7+ years shipping production LLM and autonomous agent systems alongside large-scale data platforms. I'm a Top Rated Upwork freelancer with a <span class="text-[color:var(--color-text)]">100% Job Success Score</span>.
+        </p>
+        <p>
+          I own the full lifecycle — prototype through scaled, monitored production — including evaluation, observability, and guardrails. Recent work:
+          a <span class="text-[color:var(--color-text)]">multi-agent customer-support system serving ~500K users</span> on AWS Bedrock and ECS;
+          an internal <span class="text-[color:var(--color-text)]">hybrid RAG + MCP data platform</span> unifying MySQL, S3, Drive, and Sheets behind a natural-language interface;
+          a <span class="text-[color:var(--color-text)]">CrewAI-based multi-agent SEO content pipeline</span>;
+          and a <span class="text-[color:var(--color-text)]">compliance-report AI</span> that grades client materials against regulatory requirements.
+        </p>
+        <p>
+          Fluent across major model providers, async Python, and containerized infrastructure (Docker, Kubernetes, ECS).
+        </p>
+
+        <div class="flex flex-wrap gap-2 pt-2">
+          {providers.map((p) => (
+            <span class="chip chip-accent">{p}</span>
+          ))}
+        </div>
+      </div>
+
+      <aside class="reveal" style="--reveal-delay: 120ms">
+        <div class="card p-6 lg:p-8">
+          <p class="eyebrow mb-4">// core strengths</p>
+          <ul class="space-y-3">
+            {strengths.map((s) => (
+              <li class="flex items-start gap-3 text-sm lg:text-[0.95rem] text-[color:var(--color-text)]">
+                <span class="mt-1 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[color:var(--color-accent)]"></span>
+                <span>{s}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
